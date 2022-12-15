@@ -1,4 +1,4 @@
-package baseball.vo;
+package baseball.entity;
 
 import baseball.view.GameMessage;
 import camp.nextstep.edu.missionutils.Randoms;
@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Computer {
+    private List<String> randomNumbers;
     //역할
     // 1. 랜덤 3자리 숫자 정하기
     public List<String> makeRandomNumber(){
-        List<String> randomNumbers = new ArrayList<>();
+        randomNumbers = new ArrayList<>();
         while(randomNumbers.size() < GameMessage.NUMBER_LENGTH){
             String number = Integer.toString(Randoms.pickNumberInRange(GameMessage.MIN_NUMBER, GameMessage.MAX_NUMBER));
 
